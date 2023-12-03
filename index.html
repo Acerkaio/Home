@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿切尔凯奥</title>
+    <style>
+        :root {
+            --Aer-black: #0a0a0a;
+            --Aer-light-white: #f8f8f8;
+            --Blue: #40a0ff;
+        }
+
+        body {
+            font: 16px "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* scoll */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgb(239, 239, 239);
+            border-radius: 2px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1b4c7e96;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #40a0ff;
+        }
+
+
+        /* main */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .BgBlack {
+            background-color: var(--Aer-black);
+        }
+
+        /* app-content */
+        .PROFILE-Wrapper {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .PROFILE-BG {
+            animation: PROFILE-BG-admission 2.5s cubic-bezier(0, 0, 0.1, 1);
+            transform: scale(1);
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://pic.imgdb.cn/item/655b609ac458853aef5767f5.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .PROFILE-BackFilter {
+            animation: PROFILE-Back-admission 2s cubic-bezier(0.35, 0.1, 0.52, 0.78);
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(0px) brightness(50%);
+        }
+
+        /* animation */
+        @keyframes PROFILE-BG-admission {
+            0% {
+                transform: scale(1.4);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes PROFILE-Back-admission {
+            0% {
+                backdrop-filter: blur(0px) brightness(100%);
+            }
+
+            100% {
+                backdrop-filter: blur(0px) brightness(50%);
+            }
+        }
+
+        @keyframes avatar-admission {
+            0% {
+                opacity: 0;
+                transform: scale(.5);
+            }
+
+            55% {
+                opacity: 0;
+                transform: scale(.5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .lf-aMe {
+            border-radius: 5%;
+            overflow: hidden;
+            background-color: var(--Aer-light-white);
+            height: 310px;
+            width: 220px;
+        }
+    </style>
+</head>
+
+<body>
+    <app>
+        <!-- list:
+            1. My profile.
+            2. My skills.
+            3. My projects.
+            4. Music.
+            5. links.
+        -->
+
+        <div class="PROFILE-Wrapper Aer-BackWrapper BgBlack">
+            <div class="PROFILE-BG">
+                <div class="PROFILE-BackFilter">
+                </div>
+            </div>
+        </div>
+
+        <div
+            style="position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center;">
+            <div class="lf-a">
+                <div class="lf-aMe" style="text-align: center;">
+                    <div>
+                        <img src="https://pic.imgdb.cn/item/655cac5bc458853aef238040.jpg" alt="aAvatar"
+                            style="height: 220px; border-radius: 5%;">
+                    </div>
+                    <span style="margin: 0 auto; font-size: large; font-weight:370; font-size: 20px;">Acerkaio</span>
+                    <div style="margin: 0 auto; width: 50px; height: 0px; background-color: var(--Blue); border-radius: 5px; border: 3px solid var(--Blue); margin-top: 15px;"></div>
+                </div>
+                <div class="lf-aLinks">
+
+                </div>
+            </div>
+            <div class="rg-a">
+                <div class="rg-aProfile">
+
+                </div>
+            </div>
+        </div>
+    </app>
+</body>
+
+</html>

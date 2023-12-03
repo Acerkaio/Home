@@ -1,2 +1,4 @@
-# Home
-使用原生 HTML + JS + CSS 开发，练习。
+# MyHome
+使用 HTML + JS(JQ) + CSS 开发，练习。
+
+---
